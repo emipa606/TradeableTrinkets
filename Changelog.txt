@@ -1,3 +1,13 @@
+## [1.0.1] - 2021-03-20
+
+### Added
+- Doll trinkets craftable from leather and fabric
+- Factoring stuff value into final market value of stuffed trinkets
+
+### Changed
+- Adjusted trinket value to move break-even point to "Good" quality
+
+
 ## [1.0.0] - 2021-02-24
 
 ### Added
