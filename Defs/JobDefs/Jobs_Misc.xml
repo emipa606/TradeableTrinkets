@@ -9,7 +9,6 @@
     <reportString>playing with TargetA.</reportString>
     <joyDuration>4000</joyDuration>
     <joyKind>CM_Tradeable_Trinkets_JoyKind_PlayWithTrinket</joyKind>
-    <joyGainRate>0.5</joyGainRate>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
   
