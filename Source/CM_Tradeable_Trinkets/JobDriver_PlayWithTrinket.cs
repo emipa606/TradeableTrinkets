@@ -20,7 +20,7 @@ namespace CM_Tradeable_Trinkets
         {
             float joyGainFactor = Trinket.GetStatValue(StatDefOf.JoyGainFactor);
 
-            Log.Message(string.Format("JobDriver_PlayWithTrinket.MakeNewToils: {0} playing with {1}, joyGainFactor: {2}", pawn, Trinket, joyGainFactor));
+            //Log.Message(string.Format("JobDriver_PlayWithTrinket.MakeNewToils: {0} playing with {1}, joyGainFactor: {2}", pawn, Trinket, joyGainFactor));
 
             Toil reserveTrinket = Toils_Reserve.Reserve(TargetIndex.A);
             yield return reserveTrinket;

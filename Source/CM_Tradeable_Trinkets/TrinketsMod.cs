@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using Verse;
 
 namespace CM_Tradeable_Trinkets
@@ -10,8 +11,8 @@ namespace CM_Tradeable_Trinkets
 
         public TrinketsMod(ModContentPack content) : base(content)
         {
-            //var harmony = new Harmony("CM_Tradeable_Trinkets");
-            //harmony.PatchAll();
+            var harmony = new Harmony("CM_Tradeable_Trinkets");
+            harmony.PatchAll();
 
             _instance = this;
         }
