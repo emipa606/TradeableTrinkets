@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="JobDriver_PlayWithTrinket.cs" />
     <Compile Include="JoyGiver_PlayWithTrinket.cs" />
+    <Compile Include="RecipeWorkerCounter_Patches.cs" />
     <Compile Include="StatExtension_Patches.cs" />
     <Compile Include="Trinket.cs" />
     <Compile Include="TrinketsMod.cs" />
