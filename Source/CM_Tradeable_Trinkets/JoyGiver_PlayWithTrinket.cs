@@ -16,9 +16,9 @@ namespace CM_Tradeable_Trinkets
             return TryGiveJobInternal(pawn, null);
         }
 
-        public override Job TryGiveJobInGatheringArea(Pawn pawn, IntVec3 gatheringSpot)
+        public override Job TryGiveJobInGatheringArea(Pawn pawn, IntVec3 gatheringSpot, float maxRadius = -1f)
         {
-            return TryGiveJobInternal(pawn, (Thing x) => !x.Spawned || GatheringsUtility.InGatheringArea(x.Position, gatheringSpot, pawn.Map));
+            return TryGiveJobInternal(pawn, (Thing x) => !x.Spawned || (GatheringsUtility.InGatheringArea(x.Position, gatheringSpot, pawn.Map) && (maxRadius < 0f || x.Position.InHorDistOf(gatheringSpot, maxRadius))));
         }
 
         private Job TryGiveJobInternal(Pawn pawn, Predicate<Thing> extraValidator)
