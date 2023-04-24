@@ -1,9 +1,7 @@
-﻿using RimWorld;
-using Verse;
+﻿using Verse;
 
-namespace CM_Tradeable_Trinkets
+namespace CM_Tradeable_Trinkets;
+
+public class Trinket : ThingWithComps
 {
-    public class Trinket : ThingWithComps
-    {
-    }
 }

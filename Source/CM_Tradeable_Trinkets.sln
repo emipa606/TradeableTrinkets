@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CM_Tradeable_Trinkets", "CM_Tradeable_Trinkets.csproj", "{2EDA6FAD-8876-4698-A8DE-8B5CDBC6EBCD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CM_Tradeable_Trinkets", "CM_Tradeable_Trinkets\CM_Tradeable_Trinkets.csproj", "{2EDA6FAD-8876-4698-A8DE-8B5CDBC6EBCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

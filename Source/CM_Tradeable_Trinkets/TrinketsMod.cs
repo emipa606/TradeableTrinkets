@@ -1,20 +1,17 @@
 ﻿using HarmonyLib;
-using RimWorld;
 using Verse;
 
-namespace CM_Tradeable_Trinkets
+namespace CM_Tradeable_Trinkets;
+
+public class TrinketsMod : Mod
 {
-    public class TrinketsMod : Mod
+    public TrinketsMod(ModContentPack content) : base(content)
     {
-        private static TrinketsMod _instance;
-        public static TrinketsMod Instance => _instance;
+        var harmony = new Harmony("CM_Tradeable_Trinkets");
+        harmony.PatchAll();
 
-        public TrinketsMod(ModContentPack content) : base(content)
-        {
-            var harmony = new Harmony("CM_Tradeable_Trinkets");
-            harmony.PatchAll();
-
-            _instance = this;
-        }
+        Instance = this;
     }
+
+    public static TrinketsMod Instance { get; private set; }
 }

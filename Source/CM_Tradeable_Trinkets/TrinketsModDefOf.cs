@@ -1,13 +1,10 @@
-﻿using System.Collections.Generic;
-
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
-namespace CM_Tradeable_Trinkets
+namespace CM_Tradeable_Trinkets;
+
+[DefOf]
+public static class TrinketsModDefOf
 {
-    [DefOf]
-    public static class TrinketsModDefOf
-    {
-        public static JobDef CM_Tradeable_Trinkets_Job_PlayWithTrinket;
-    }
+    public static JobDef CM_Tradeable_Trinkets_Job_PlayWithTrinket;
 }

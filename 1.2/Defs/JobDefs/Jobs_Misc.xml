@@ -1,8 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <!--============ Need satisfaction ============-->
-
   <JobDef>
     <defName>CM_Tradeable_Trinkets_Job_PlayWithTrinket</defName>
     <driverClass>CM_Tradeable_Trinkets.JobDriver_PlayWithTrinket</driverClass>
@@ -11,5 +9,4 @@
     <joyKind>CM_Tradeable_Trinkets_JoyKind_PlayWithTrinket</joyKind>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
-  
 </Defs>
