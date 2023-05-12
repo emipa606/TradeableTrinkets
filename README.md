@@ -2,7 +2,7 @@
 
 ![Image](https://i.imgur.com/buuPQel.png)
 
-Update of mod https://steamcommunity.com/sharedfiles/filedetails/?id=2446986597
+Update of Captain Muscles (Nathan Harbour) mod https://steamcommunity.com/sharedfiles/filedetails/?id=2446986597
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 
@@ -61,9 +61,6 @@ Item Art: SirLalaPyon
 Coding: Captain Muscles
 
 [hr][/hr]
-Github download link:
-https://github.com/CaptainMuscles/CM_Tradeable_Trinkets/releases]https://github.com/CaptainMuscles/CM_Tradeable_Trinkets/releases
-[hr][/hr]
 This mod was requested at the Rimworld Mod market.
 https://discord.com/invite/7befJWr9xS]![Image](https://i.imgur.com/gh6C5m2.png)
 
@@ -106,3 +103,4 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2446986597]![Image](https
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2966786575]Last updated 2023-05-12
