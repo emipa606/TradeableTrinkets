@@ -2,6 +2,4 @@
 
 namespace CM_Tradeable_Trinkets;
 
-public class Trinket : ThingWithComps
-{
-}
+public class Trinket : ThingWithComps;

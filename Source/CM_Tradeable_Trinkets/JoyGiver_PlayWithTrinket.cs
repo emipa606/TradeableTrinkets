@@ -8,7 +8,7 @@ namespace CM_Tradeable_Trinkets;
 
 public class JoyGiver_PlayWithTrinket : JoyGiver
 {
-    private static readonly List<Thing> tmpCandidates = new List<Thing>();
+    private static readonly List<Thing> tmpCandidates = [];
 
     public override Job TryGiveJob(Pawn pawn)
     {
@@ -30,6 +30,27 @@ public class JoyGiver_PlayWithTrinket : JoyGiver
 
     protected virtual Thing BestTrinket(Pawn pawn, Predicate<Thing> extraValidator)
     {
+        var innerContainer = pawn.inventory.innerContainer;
+        foreach (var trinket in innerContainer)
+        {
+            if (SearchSetWouldInclude(trinket) && Predicate(trinket))
+            {
+                return trinket;
+            }
+        }
+
+        tmpCandidates.Clear();
+        GetSearchSet(pawn, tmpCandidates);
+        if (tmpCandidates.Count == 0)
+        {
+            return null;
+        }
+
+        var result = GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, tmpCandidates,
+            PathEndMode.OnCell, TraverseParms.For(pawn), 9999f, Predicate);
+        tmpCandidates.Clear();
+        return result;
+
         bool Predicate(Thing t)
         {
             if (!t.Spawned)
@@ -59,27 +80,6 @@ public class JoyGiver_PlayWithTrinket : JoyGiver
 
             return extraValidator == null || extraValidator(t);
         }
-
-        var innerContainer = pawn.inventory.innerContainer;
-        foreach (var trinket in innerContainer)
-        {
-            if (SearchSetWouldInclude(trinket) && Predicate(trinket))
-            {
-                return trinket;
-            }
-        }
-
-        tmpCandidates.Clear();
-        GetSearchSet(pawn, tmpCandidates);
-        if (tmpCandidates.Count == 0)
-        {
-            return null;
-        }
-
-        var result = GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, tmpCandidates,
-            PathEndMode.OnCell, TraverseParms.For(pawn), 9999f, Predicate);
-        tmpCandidates.Clear();
-        return result;
     }
 
     protected virtual bool SearchSetWouldInclude(Thing thing)
