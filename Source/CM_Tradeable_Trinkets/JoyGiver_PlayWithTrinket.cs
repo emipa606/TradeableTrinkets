@@ -12,17 +12,17 @@ public class JoyGiver_PlayWithTrinket : JoyGiver
 
     public override Job TryGiveJob(Pawn pawn)
     {
-        return TryGiveJobInternal(pawn, null);
+        return tryGiveJobInternal(pawn, null);
     }
 
     public override Job TryGiveJobInGatheringArea(Pawn pawn, IntVec3 gatheringSpot, float maxRadius = -1f)
     {
-        return TryGiveJobInternal(pawn,
+        return tryGiveJobInternal(pawn,
             x => !x.Spawned || GatheringsUtility.InGatheringArea(x.Position, gatheringSpot, pawn.Map) &&
                 (maxRadius < 0f || x.Position.InHorDistOf(gatheringSpot, maxRadius)));
     }
 
-    private Job TryGiveJobInternal(Pawn pawn, Predicate<Thing> extraValidator)
+    private Job tryGiveJobInternal(Pawn pawn, Predicate<Thing> extraValidator)
     {
         var thing = BestTrinket(pawn, extraValidator);
         return thing != null ? CreateJob(thing, pawn) : null;
@@ -33,7 +33,7 @@ public class JoyGiver_PlayWithTrinket : JoyGiver
         var innerContainer = pawn.inventory.innerContainer;
         foreach (var trinket in innerContainer)
         {
-            if (SearchSetWouldInclude(trinket) && Predicate(trinket))
+            if (SearchSetWouldInclude(trinket) && predicate(trinket))
             {
                 return trinket;
             }
@@ -47,11 +47,11 @@ public class JoyGiver_PlayWithTrinket : JoyGiver
         }
 
         var result = GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, tmpCandidates,
-            PathEndMode.OnCell, TraverseParms.For(pawn), 9999f, Predicate);
+            PathEndMode.OnCell, TraverseParms.For(pawn), 9999f, predicate);
         tmpCandidates.Clear();
         return result;
 
-        bool Predicate(Thing t)
+        bool predicate(Thing t)
         {
             if (!t.Spawned)
             {

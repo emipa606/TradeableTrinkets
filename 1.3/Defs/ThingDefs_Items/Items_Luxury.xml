@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef Name="CM_Tradeable_Trinkets_ThingDef_Trinket_Base" ParentName="ResourceBase" Abstract="True">
     <thingClass>CM_Tradeable_Trinkets.Trinket</thingClass>

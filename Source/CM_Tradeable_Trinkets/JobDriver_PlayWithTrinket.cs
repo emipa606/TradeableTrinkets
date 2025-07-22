@@ -7,7 +7,7 @@ namespace CM_Tradeable_Trinkets;
 
 public class JobDriver_PlayWithTrinket : JobDriver
 {
-    protected Thing Trinket => job.GetTarget(TargetIndex.A).Thing;
+    private Thing Trinket => job.GetTarget(TargetIndex.A).Thing;
 
     public override bool TryMakePreToilReservations(bool errorOnFailed)
     {
@@ -29,20 +29,20 @@ public class JobDriver_PlayWithTrinket : JobDriver
 
         var toil = new Toil
         {
-            tickAction = delegate
+            tickIntervalAction = delegate(int delta)
             {
                 if (pawn.IsHashIntervalTick(60))
                 {
-                    var socialTarget = FindClosePawn();
+                    var socialTarget = findClosePawn();
                     if (socialTarget != null)
                     {
                         pawn.rotationTracker.FaceCell(socialTarget.Position);
                     }
                 }
 
-                pawn.GainComfortFromCellIfPossible();
+                pawn.GainComfortFromCellIfPossible(delta);
 
-                JoyUtility.JoyTickCheckEnd(pawn, JoyTickFullJoyAction.EndJob, joyGainFactor);
+                JoyUtility.JoyTickCheckEnd(pawn, delta, JoyTickFullJoyAction.EndJob, joyGainFactor);
             },
             socialMode = RandomSocialMode.SuperActive,
             defaultCompleteMode = ToilCompleteMode.Delay,
@@ -52,7 +52,7 @@ public class JobDriver_PlayWithTrinket : JobDriver
         yield return toil;
     }
 
-    private Pawn FindClosePawn()
+    private Pawn findClosePawn()
     {
         var position = pawn.Position;
         for (var i = 0; i < 24; i++)

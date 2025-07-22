@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/.github/">
+    <File Path="../.github/copilot-instructions.md" />
+  </Folder>
+  <Configurations>
+    <BuildType Name="Release" />
+  </Configurations>
+  <Project Path="CM_Tradeable_Trinkets/CM_Tradeable_Trinkets.csproj" />
+</Solution>

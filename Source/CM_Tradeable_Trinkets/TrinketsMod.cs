@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using System.Reflection;
+using HarmonyLib;
 using Verse;
 
 namespace CM_Tradeable_Trinkets;
@@ -7,11 +8,6 @@ public class TrinketsMod : Mod
 {
     public TrinketsMod(ModContentPack content) : base(content)
     {
-        var harmony = new Harmony("CM_Tradeable_Trinkets");
-        harmony.PatchAll();
-
-        Instance = this;
+        new Harmony("CM_Tradeable_Trinkets").PatchAll(Assembly.GetExecutingAssembly());
     }
-
-    public static TrinketsMod Instance { get; private set; }
 }

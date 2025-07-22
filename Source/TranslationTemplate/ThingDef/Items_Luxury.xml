@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: doll -->
+  <CM_Tradeable_Trinkets_Thing_Trinket_Doll.label>doll</CM_Tradeable_Trinkets_Thing_Trinket_Doll.label>
+  <!-- EN: A small doll made with love. -->
+  <CM_Tradeable_Trinkets_Thing_Trinket_Doll.description>A small doll made with love.</CM_Tradeable_Trinkets_Thing_Trinket_Doll.description>
+  <!-- EN: Rim Boy -->
+  <CM_Tradeable_Trinkets_Thing_Trinket_Industrial.label>Rim Boy</CM_Tradeable_Trinkets_Thing_Trinket_Industrial.label>
+  <!-- EN: A portable gaming device that fits in ones pocket. Play horseshoes anywhere in four vivid colors! -->
+  <CM_Tradeable_Trinkets_Thing_Trinket_Industrial.description>A portable gaming device that fits in ones pocket. Play horseshoes anywhere in four vivid colors!</CM_Tradeable_Trinkets_Thing_Trinket_Industrial.description>
+  <!-- EN: tablet -->
+  <CM_Tradeable_Trinkets_Thing_Trinket_Spacer.label>tablet</CM_Tradeable_Trinkets_Thing_Trinket_Spacer.label>
+  <!-- EN: A slick, must-have electronic gadget. This device will truly revolutionize your life. Records personal information about the user in order to provide a customized experience. -->
+  <CM_Tradeable_Trinkets_Thing_Trinket_Spacer.description>A slick, must-have electronic gadget. This device will truly revolutionize your life. Records personal information about the user in order to provide a customized experience.</CM_Tradeable_Trinkets_Thing_Trinket_Spacer.description>
+  <!-- EN: small totem -->
+  <CM_Tradeable_Trinkets_Thing_Trinket_Tribal.label>small totem</CM_Tradeable_Trinkets_Thing_Trinket_Tribal.label>
+  <!-- EN: A small totem depicting animals and characters from tribal stories. -->
+  <CM_Tradeable_Trinkets_Thing_Trinket_Tribal.description>A small totem depicting animals and characters from tribal stories.</CM_Tradeable_Trinkets_Thing_Trinket_Tribal.description>
+</LanguageData>
