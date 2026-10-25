@@ -6,4 +6,20 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="CM_Tradeable_Trinkets/CM_Tradeable_Trinkets.csproj" />
+  <Folder Name="/XML/1.7/Defs/Joy/">
+    <File Path="../1.7/Defs/Joy/JoyGivers.xml" />
+    <File Path="../1.7/Defs/Joy/JoyKinds.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Items/">
+    <File Path="../1.7/Defs/ThingDefs_Items/Items_Luxury.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/JobDefs/">
+    <File Path="../1.7/Defs/JobDefs/Jobs_Misc.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingCategoryDefs/">
+    <File Path="../1.7/Defs/ThingCategoryDefs/ThingCategories.xml" />
+  </Folder>
 </Solution>

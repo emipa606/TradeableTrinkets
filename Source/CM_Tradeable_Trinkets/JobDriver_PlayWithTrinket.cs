@@ -18,8 +18,6 @@ public class JobDriver_PlayWithTrinket : JobDriver
     {
         var joyGainFactor = Trinket.GetStatValue(StatDefOf.JoyGainFactor);
 
-        //Log.Message(string.Format("JobDriver_PlayWithTrinket.MakeNewToils: {0} playing with {1}, joyGainFactor: {2}", pawn, Trinket, joyGainFactor));
-
         var reserveTrinket = Toils_Reserve.Reserve(TargetIndex.A);
         yield return reserveTrinket;
         yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch)
